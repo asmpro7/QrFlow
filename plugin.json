@@ -1,0 +1,12 @@
+{
+    "ID": "725660A1CB3D4FFE978A8B477EB376B4",
+    "ActionKeyword": "qr",
+    "Name": "QrFlow",
+    "Description": "Plugin to generate QR code",
+    "Author": "Ahmed ElSaeed",
+    "Version": "1.0.0",
+    "Language": "python",
+    "Website": "https://github.com/asmpro7/QrFlow",
+    "IcoPath": "Images\\app.png",
+    "ExecuteFileName": "main.py"
+}
