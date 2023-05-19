@@ -28,5 +28,6 @@
 <p align="center"><img src="https://github.com/asmpro7/QrFlow/assets/114514662/67600d11-a476-46e8-a98a-73a927bd76b9" alt="features"></p>
 <h2 align="center" id="ToDo">ToDo</h2>
 <ul>
-<li>make a function to copy Qr</li>
+<li><strike>make a function to copy Qr</strike></li>
 </ul>
+<p><img src="https://github.com/asmpro7/AudFlow/assets/114514662/d102386e-0852-4925-b02a-cd5d07ff0e4e" alt="image"></p>

@@ -1,4 +1,6 @@
-# -*- coding: utf-8 -*-
+# created by Ahmed ElSaeed
+# Telegram: @asmprotk
+# GitHub: @asmpro7
 
 import sys,os
 parent_folder_path = os.path.abspath(os.path.dirname(__file__))
@@ -10,6 +12,7 @@ from flowlauncher import FlowLauncher
 import qrcode
 import random
 import glob
+import subprocess
 
 class QrFlow(FlowLauncher):
 
@@ -37,12 +40,21 @@ class QrFlow(FlowLauncher):
                     "IcoPath": f"QR\\QrFlow_{na}.png",
                     "JsonRPCAction": {"method": "open", "parameters":[f"QR\\QrFlow_{na}.png"]  }
                     })
+            
+            output.append({
+                    "Title": "Click to Copy",
+                    "SubTitle": f"QrFlow_{na}.png",
+                    "IcoPath": f"QR\\QrFlow_{na}.png",
+                    "JsonRPCAction": {"method": "copy", "parameters":[f"QR\\QrFlow_{na}.png"]  }
+                    })
+            
             output.append({
                     "Title": "Click to open location",
                     "SubTitle": f"QrFlow_{na}.png",
                     "IcoPath": f"QR\\QrFlow_{na}.png",
                     "JsonRPCAction": {"method": "loca", "parameters":[f"QR\\QrFlow_{na}.png"]  }
                     })
+            
     
         return output
     def open(self,QRF):
@@ -50,7 +62,10 @@ class QrFlow(FlowLauncher):
 
     def loca(sef,file_path):
         abs_file_path = os.path.abspath(file_path)
-        os.startfile(os.path.dirname(abs_file_path))    
+        os.startfile(os.path.dirname(abs_file_path))   
+         
+    def copy(sef,file_path):
+        subprocess.run(f"nircmd.exe clipboard copyimage {file_path}") 
 
     def context_menu(self, data):
         return [{"Title": "Use: ' clear| ' to remove all QRs","IcoPath": "Images/app.png"}]
